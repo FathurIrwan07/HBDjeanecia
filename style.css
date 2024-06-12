@@ -1,0 +1,111 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s;
+}
+
+h1 {
+  color: #ff6f61;
+  animation: bounce 2s infinite;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: spin 4s infinite linear;
+}
+
+.input-name {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ff6f61;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e55d4a;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #34495e;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.warning {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #e74c3c;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
